@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import itertools
-
+    
 #https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html#sphx-glr-auto-examples-model-selection-plot-confusion-matrix-py
 def plot_confusion_matrix(cm, classes,
                           normalize=False,
@@ -36,3 +36,13 @@ def plot_confusion_matrix(cm, classes,
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
     plt.tight_layout()
+    
+def print_scores(acc_list, recall_list, prec_list, acc, recall, prec):
+    print('accuracy score per set', acc_list)
+    print('recall score per set', recall_list)
+    print('precision score per set', prec_list)
+    print()
+    print('average accuracy score: ', acc)
+    print('average recall score: ', recall)
+    print('average precision score: ', prec)    
+    
